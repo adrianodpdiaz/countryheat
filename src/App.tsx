@@ -1,8 +1,11 @@
-import { CountryDropdown } from './Components/CountryDropdown';
+import { Home } from './pages/Home';
+import { DataContextProvider } from './contexts/DataContext';
 
 function App() {
   return (
-    <CountryDropdown />
+    <DataContextProvider>
+      <Home />
+    </DataContextProvider>
   );
 }
 
