@@ -1,7 +1,7 @@
 # CountryHeat
 
-**CountryHeat is a game where you receive a random European Country, and must select another one to compare.
-If the capital's temperature of your selected country is highest than the random country, you will receive 100 points. Otherwise, game over!**
+**CountryHeat is a game where you receive a random European Country, and must select another one to compare.**
+**If the capital's temperature of your selected country is highest than the random country, you will receive 100 points. Otherwise, game over!**
 
 This project was bootstraped with [`create-react-app`](https://github.com/facebook/create-react-app).
 
