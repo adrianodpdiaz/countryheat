@@ -1,0 +1,48 @@
+.game-over-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: #E65038;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: black;
+        font-size: 1.8rem;
+    }
+}
+
+.game-over-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.game-over-title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.game-over-body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+}
+
+.game-over-footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

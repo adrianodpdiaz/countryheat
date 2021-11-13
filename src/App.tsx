@@ -1,11 +1,20 @@
 import { Home } from './pages/Home';
-import { DataContextProvider } from './contexts/DataContext';
+import { RandomCountryContextProvider } from './contexts/RandomCountryContext';
+import { CountrySelectorContextProvider } from './contexts/CountrySelectorContext';
+import { ScoreContextProvider } from './contexts/ScoreContextProvider';
+import { GameOverContextProvider } from './contexts/GameOverContextProvider';
 
 function App() {
   return (
-    <DataContextProvider>
-      <Home />
-    </DataContextProvider>
+    <GameOverContextProvider>
+      <ScoreContextProvider>
+        <CountrySelectorContextProvider>
+          <RandomCountryContextProvider>
+            <Home />
+          </RandomCountryContextProvider>
+        </CountrySelectorContextProvider>
+      </ScoreContextProvider>
+    </GameOverContextProvider>
   );
 }
 
