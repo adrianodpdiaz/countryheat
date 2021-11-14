@@ -1,11 +1,11 @@
 import axios, { AxiosResponse } from "axios";
 import { Country, CountryResponse } from "./Interfaces";
 
+export const countryApiURL = "https://restcountries.com/v3.1/region/europe";
+
 export function toCelsius(kelvin: number) {
     return Number((kelvin - 273.15).toFixed(2));
 }
-
-export const countryApiURL = "https://restcountries.com/v3.1/region/europe";
 
 export async function toCountryObject(country: string) {
     let temp: Country = {

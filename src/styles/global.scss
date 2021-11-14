@@ -1,5 +1,5 @@
 main {
-    background: #E65038;
+    background: #C1442E;
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -61,28 +61,18 @@ main {
 }
 
 .ant-btn-primary {
-  background-color: #0E6C6C;
+  background-color: black;
+  border-color: white;
+  margin-top: 15px;
+  width: 110px;
+}
+
+.ant-btn-primary:hover {
+  background-color: rgb(66, 66, 66);
   border-color: white;
 }
 
-/*
-export const Country = styled.h1`
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1.6em;
-    align-self: center;
-    text-align: center;
-    color: white;
-    margin-top: 10px;
-`;
-
-export const Info = styled.p`
-    font-family: 'IBM Plex Sans', sans-serif;
-    align-self: center;
-    text-align: center;
-    font-size: 17px;
-    span {
-        font-size: 18px;
-    }
-    color: white;
-`;
-*/
+.ant-btn-primary:focus {
+  background-color: black;
+  border-color: white;
+}

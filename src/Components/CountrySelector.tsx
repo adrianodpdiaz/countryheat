@@ -8,10 +8,9 @@ const { Option } = Select;
 
 export function CountrySelector(props: CountrySelectorProps) {
     const { countries } = useContext(CountrySelectorContext);
-    console.dir(countries);
 
     return (
-        <>
+        <label>
             <Select {...props}>
                 {countries?.sort((a,b) => {
                     if (a.value > b.value) {
@@ -28,6 +27,6 @@ export function CountrySelector(props: CountrySelectorProps) {
                     </Option>
                 ))}
             </Select>
-        </>
+        </label>
     )
 }

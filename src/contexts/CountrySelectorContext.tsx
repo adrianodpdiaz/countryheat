@@ -19,6 +19,7 @@ export function CountrySelectorContextProvider(props: ContextProviderProps) {
                 )));
             } catch(error) {
                 console.log(error);
+                throw new Error();
             }
         }
     
@@ -26,7 +27,9 @@ export function CountrySelectorContextProvider(props: ContextProviderProps) {
     }, []);
 
     return (
-        <CountrySelectorContext.Provider value={{ countries, setCountries, selected, setSelected, previous, setPrevious }} >
+        <CountrySelectorContext.Provider value={{ 
+            countries, setCountries, selected, setSelected, previous, setPrevious }}
+        >
             {props.children}
         </CountrySelectorContext.Provider>
     )

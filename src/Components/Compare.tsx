@@ -15,7 +15,10 @@ export function Compare() {
     const { score, setScore } = useContext(ScoreContext);
     const { setGameOver } = useContext(GameOverContext);
 
-    async function getCountriesFromAPI() {
+    /**
+     * Gets the full list of european countries from the API
+     */
+    async function getCountriesFromTheAPI() {
         try {
             const { data } = await axios.get<CountryNameType>(`${countryApiURL}`);
             setCountries(data.map(({ name }) => (
@@ -27,14 +30,17 @@ export function Compare() {
     }
 
     function handleCompare() {
+        // Right choice
         if((selected?.capital.temperature !== undefined) && (randomCountry?.capital.temperature !== undefined)
             && (selected?.capital.temperature > randomCountry?.capital.temperature)) {
                 setScore(score + 100);
 
+                // The component with +100 label shows up below the score
                 let selectedTemperature = document.getElementById("selectedTemperature");
                 //@ts-ignore
                 selectedTemperature.style.display = "block";
 
+                // Creates a new Select element without the countries already used
                 const noSelectedCountries: CountryItemType = [];
                 countries?.forEach((ct) => {
                     if(ct.label !== selected.name) {
@@ -57,7 +63,7 @@ export function Compare() {
                     });
                 });
 
-                getCountriesFromAPI();
+                getCountriesFromTheAPI();
         }
 
         setSelected({
@@ -72,7 +78,7 @@ export function Compare() {
     return (
             <Button
                 type="primary"
-                style={{ "marginTop": "15px", "width": "110px"}}
+                // style={{ "marginTop": "15px", "width": "110px"}}
                 onClick={handleCompare}
                 >
                 Compare
