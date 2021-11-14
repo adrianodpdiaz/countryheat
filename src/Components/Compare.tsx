@@ -53,6 +53,7 @@ export function Compare() {
                 setScore(0);
                 setGameOver(true);
 
+                // gets a new random country
                 toCountryObject("random").then((response) => {
                     setRandomCountry({
                         name: response.name,
@@ -63,22 +64,20 @@ export function Compare() {
                     });
                 });
 
+                // brings back the previously deleted countries from the select bar
                 getCountriesFromTheAPI();
         }
 
+        // clear the selection bar
         setSelected({
             name: undefined,
             capital: {}
         });
-
-        console.log(randomCountry);
-        console.log(selected);
     }
 
     return (
             <Button
                 type="primary"
-                // style={{ "marginTop": "15px", "width": "110px"}}
                 onClick={handleCompare}
                 >
                 Compare
