@@ -32,8 +32,7 @@ export function Home() {
             });
         });
 
-        let selectedTemperature = document.getElementById("selectedTemperature");
-        //@ts-ignore
+        let selectedTemperature = document.getElementById("selectedTemperature")!;
         selectedTemperature.style.display = "none";
     }
 

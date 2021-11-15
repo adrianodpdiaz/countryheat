@@ -36,8 +36,7 @@ export function Compare() {
                 setScore(score + 100);
 
                 // The component with +100 label shows up below the score
-                let selectedTemperature = document.getElementById("selectedTemperature");
-                //@ts-ignore
+                let selectedTemperature = document.getElementById("selectedTemperature")!;
                 selectedTemperature.style.display = "block";
 
                 // Creates a new Select element without the countries already used
