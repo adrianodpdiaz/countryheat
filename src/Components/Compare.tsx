@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { RandomCountryContext } from '../contexts/RandomCountryContext';
 import { CountrySelectorContext } from '../contexts/CountrySelectorContext';
 import { ScoreContext } from '../contexts/ScoreContextProvider';
-import { countryApiURL, toCountryObject } from '../general/GeneralFunctions';
+import { EU_URL, toCountryObject } from '../general/GeneralFunctions';
 import { GameOverContext } from '../contexts/GameOverContextProvider';
 import { CountryItemType, CountryNameType } from '../general/Interfaces';
 import axios from 'axios';
@@ -20,12 +20,13 @@ export function Compare() {
      */
     async function getCountriesFromTheAPI() {
         try {
-            const { data } = await axios.get<CountryNameType>(`${countryApiURL}`);
+            const { data } = await axios.get<CountryNameType>(EU_URL);
             setCountries(data.map(({ name }) => (
                 { label: name.common, value: name.common }
             )));
         } catch(error) {
             console.log(error);
+            throw new Error();
         }
     }
 

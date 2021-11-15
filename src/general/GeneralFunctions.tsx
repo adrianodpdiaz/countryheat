@@ -1,7 +1,9 @@
 import axios, { AxiosResponse } from "axios";
 import { Country, CountryResponse } from "./Interfaces";
 
-export const countryApiURL = "https://restcountries.com/v3.1/region/europe";
+export const EU_URL = 'https://restcountries.com/v3.1/region/europe';
+const WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather';
+const API_ID = '2a37e727ac28a9d873aa947610c28aae';
 
 export function toCelsius(kelvin: number) {
     return Number((kelvin - 273.15).toFixed(2));
@@ -19,7 +21,7 @@ export async function toCountryObject(country: string) {
     try{
         if(country === "random") {
             let randomNumber = Math.floor(Math.random()*52);
-            await axios.get<Country>(`${countryApiURL}`).then((response: AxiosResponse) => {
+            await axios.get<Country>(EU_URL).then((response: AxiosResponse) => {
                 const random = response.data[randomNumber];
                 temp = {
                     name: random.name.common,                 
@@ -29,7 +31,7 @@ export async function toCountryObject(country: string) {
                 };
             });
         } else {
-            await axios.get<Country>(`${countryApiURL}`).then((response: AxiosResponse) => {
+            await axios.get<Country>(EU_URL).then((response: AxiosResponse) => {
                 response.data.forEach((ct: CountryResponse) => {
                     if (country === ct.name.common) {
                         temp = {
@@ -44,8 +46,12 @@ export async function toCountryObject(country: string) {
             });
         }
     
-        const tempApiURL = `https://api.openweathermap.org/data/2.5/weather?q=${temp.capital.city}&appid=2a37e727ac28a9d873aa947610c28aae`;
-        await axios.get<Country>(`${tempApiURL}`).then((response: AxiosResponse) => {
+        await axios.get<Country>(WEATHER_URL, {
+            params: {
+                q: (temp.capital.city)?.toString(),
+                appid: API_ID
+            }
+        }).then((response: AxiosResponse) => {
             const temperature = toCelsius(response.data.main.temp);
             temp = {
                 name: temp.name,                 

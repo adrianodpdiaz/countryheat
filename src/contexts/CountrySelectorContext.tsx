@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import { ContextProviderProps, CountrySelectorContextType, CountryItemType, CountryNameType, Country } from "../general/Interfaces";
-import { countryApiURL } from "../general/GeneralFunctions";
+import { EU_URL } from "../general/GeneralFunctions";
 
 export const CountrySelectorContext = createContext({} as CountrySelectorContextType);
 
@@ -13,7 +13,7 @@ export function CountrySelectorContextProvider(props: ContextProviderProps) {
     useEffect(() => {
         async function getCountries() {
             try {
-                const { data } = await axios.get<CountryNameType>(`${countryApiURL}`);
+                const { data } = await axios.get<CountryNameType>(EU_URL);
                 setCountries(data.map(({ name }) => (
                     { label: name.common, value: name.common }
                 )));
