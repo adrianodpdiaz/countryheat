@@ -1,3 +1,4 @@
+<h1 align="center">CountryHeat</h1>
 <p align="center">
   <img src="/src/assets/images/countryheat.gif"/>
 </p>
