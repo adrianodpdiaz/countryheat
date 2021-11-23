@@ -15,8 +15,8 @@ To run the app, use:
 
 You can access this app's deployment online at [`CountryHeat Firebase`](https://countryheat-5baa9.web.app/).
 
+Made by [`Adriano Diaz`](https://www.linkedin.com/in/adriano-diaz/) :bird:
+
 <p align="center">
   <img src="/src/assets/images/countryheat.gif" style="width: 550px;"/>
 </p>
-
-Made by [`Adriano Diaz`](https://www.linkedin.com/in/adriano-diaz/) :bird:
