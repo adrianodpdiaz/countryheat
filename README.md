@@ -1,9 +1,5 @@
-<table border="0">
-  <tr>
-    <td><b style="font-size:30px">CountryHeat</b></td>
-  </tr>
-  <tr>
-    <td>
+<h1>CountryHeat</h1>
+
 **CountryHeat is a game where you receive a random European Country, and must select another one to compare.**
 **If the capital's temperature of your selected country is highest than the random country, you will receive 100 points. Otherwise, game over!**
 
@@ -20,11 +16,7 @@ To run the app, use:
 You can access this app's deployment online at [`CountryHeat Firebase`](https://countryheat-5baa9.web.app/).
 
 Made by [`Adriano Diaz`](https://www.linkedin.com/in/adriano-diaz/) :bird:
-    </td>
-    <td>
-      <p align="center">
-        <img src="/src/assets/images/countryheat.gif" style="width: 550px;"/>
-      </p>
-    </td>
- </tr>
-</table>
+
+<p align="center">
+  <img src="/src/assets/images/countryheat.gif" style="width: 550px;"/>
+</p>
