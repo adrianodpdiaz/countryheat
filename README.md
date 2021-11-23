@@ -1,6 +1,6 @@
 <h1 align="center">CountryHeat</h1>
 <p align="center">
-  <img src="/src/assets/images/countryheat.gif" style="width: 500px;"/>
+  <img src="/src/assets/images/countryheat.gif" style="width: 550px;"/>
 </p>
 
 **CountryHeat is a game where you receive a random European Country, and must select another one to compare.**
