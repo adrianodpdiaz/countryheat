@@ -1,7 +1,4 @@
-<h1 align="center">CountryHeat</h1>
-<p align="center">
-  <img src="/src/assets/images/countryheat.gif" style="width: 550px;"/>
-</p>
+<h1>CountryHeat</h1>
 
 **CountryHeat is a game where you receive a random European Country, and must select another one to compare.**
 **If the capital's temperature of your selected country is highest than the random country, you will receive 100 points. Otherwise, game over!**
@@ -17,5 +14,9 @@ To run the app, use:
 #### `yarn start`
 
 You can access this app's deployment online at [`CountryHeat Firebase`](https://countryheat-5baa9.web.app/).
+
+<p align="center">
+  <img src="/src/assets/images/countryheat.gif" style="width: 550px;"/>
+</p>
 
 Made by [`Adriano Diaz`](https://www.linkedin.com/in/adriano-diaz/) :bird:
