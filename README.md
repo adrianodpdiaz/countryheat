@@ -1,6 +1,6 @@
 <h1 align="center">CountryHeat</h1>
 <p align="center">
-  <img src="/src/assets/images/countryheat.gif"/>
+  <img src="/src/assets/images/countryheat.gif" style="max-width: 300px"/>
 </p>
 
 **CountryHeat is a game where you receive a random European Country, and must select another one to compare.**
@@ -16,6 +16,6 @@ To run the app, use:
 
 #### `yarn start`
 
-You can access this App online at [`CountryHeat Firebase`](https://countryheat-5baa9.web.app/).
+You can access this app's deployment online at [`CountryHeat Firebase`](https://countryheat-5baa9.web.app/).
 
 Made by [`Adriano Diaz`](https://www.linkedin.com/in/adriano-diaz/) :bird:
