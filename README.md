@@ -1,4 +1,6 @@
-![CountryHeat GIF](/src/assets/images/countryheat.gif)
+<p align="center">
+  <img src="/src/assets/images/countryheat.gif"/>
+</p>
 
 **CountryHeat is a game where you receive a random European Country, and must select another one to compare.**
 **If the capital's temperature of your selected country is highest than the random country, you will receive 100 points. Otherwise, game over!**
